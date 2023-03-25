@@ -35,7 +35,7 @@ class ClientHandler implements Runnable {
                     this.s.close();
                     break;
                 }
-                StringTokenizer st = new StringTokenizer(received, "#");
+                StringTokenizer st = new StringTokenizer(received, "/");
                 String MsgToSend = st.nextToken();
                 String recipient = st.nextToken();
                 for (ClientHandler mc : Server.ar) {

@@ -22,6 +22,7 @@ public class Server {
             DataOutputStream dos = new DataOutputStream(s.getOutputStream());
             System.out.println("Creating a new handler for this client...");
             Scanner scn = new Scanner(System.in);
+            System.out.println("Enter the name of user to be created: ");
             String name = scn.nextLine();
             names.add(name);
             ClientHandler mtch = new ClientHandler(s, "client " + name, dis, dos);
